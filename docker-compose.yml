@@ -10,6 +10,8 @@ services:
       MYSQL_DATABASE: test
     ports:
       - 3306:3306
+    security_opt:
+      - seccomp:unconfined
     volumes:
       - mysqlvolume:/var/lib/mysql
     networks:
